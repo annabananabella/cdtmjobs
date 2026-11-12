@@ -29,12 +29,19 @@ Companies can still post jobs themselves at cdtmjobs.com.
 
 ## Features
 
-- **Job board**: public listings, plus CDTM-only listings for people who sign in with a CDTM Google account.
-- **Post a job**: companies sign in by email and submit roles. AI pre-fills the form from the job link.
-- **Newsletter**: subscribers get the current openings by email.
-- **Listing upkeep**: companies are asked monthly whether their older listings are still open.
-- **Agent intake**: AI agents collect job posts from forwarded emails, Slack channels and pasted messages, and queue them for review.
-  An admin approves every listing before it goes live.
+- **Job board**: public listings, plus CDTM-only listings for people who sign in
+  with a CDTM Google account. Filters for work mode, location and accelerator
+  (Y Combinator, Entrepreneur First, Neo, EWOR, Schub).
+- **Post a job**: companies sign in by email and submit roles. AI pre-fills the
+  form from the job link.
+- **Agent intake**: AI agents collect job posts from forwarded emails, Slack
+  channels and pasted messages, and queue them for human review. Published
+  agent posts are labelled as automatically created.
+- **Fresh listings**: companies with listings older than six weeks get a monthly
+  "still open?" email. Listings that are closed, or whose job link has
+  disappeared, are taken down, and the company can bring them back with one click.
+- **Newsletter**: every other Monday, subscribers get the latest openings by
+  email. Bounces and complaints are tracked, so those addresses aren't emailed again.
 
 ## Tech stack
 
