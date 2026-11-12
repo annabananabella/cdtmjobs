@@ -5,6 +5,28 @@ It lists open roles at CDTM-affiliated companies (startups and companies
 founded, led or supported by the CDTM community), so CDTM students, alumni and
 friends find their next role within the network.
 
+## The problem
+
+Job openings at CDTM-affiliated companies are shared all over the place: Slack
+channels, forwarded emails, newsletters and word of mouth. A job board only
+works if the jobs are actually on it, but posting relied on companies doing it
+themselves, so these opportunities never reached the board at scale.
+
+## The solution
+
+CDTM Jobs brings these jobs to one place automatically, without giving up
+quality control:
+
+1. **Collect:** agents pick up job posts from a shared inbox and from Slack channels.
+2. **Extract:** an LLM turns each message into structured listings. It splits
+   multi-role posts, reads the linked job page for missing details and skips
+   duplicates.
+3. **Review:** every listing lands in a review queue, and a human approves it
+   before it goes live.
+4. **Notify:** the person who shared the job is told when it's published.
+
+Companies can still post jobs themselves at cdtmjobs.com.
+
 ## Features
 
 - **Job board**: public listings, plus CDTM-only listings for people who sign in with a CDTM Google account.
