@@ -1,0 +1,3 @@
+-- One-off operation that was run once on the live database (2026-03-26): cleared test data (listings, companies, subscribers, email logs) before launch.
+-- Its body was removed so that setting up a fresh database never repeats it.
+-- The file is kept so the migration history stays aligned with the live database.

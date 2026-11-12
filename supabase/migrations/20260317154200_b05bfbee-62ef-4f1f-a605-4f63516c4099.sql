@@ -1,0 +1,2 @@
+ALTER TABLE public.job_listings
+ADD COLUMN IF NOT EXISTS accelerator text;

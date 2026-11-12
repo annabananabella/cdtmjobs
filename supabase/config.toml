@@ -1,0 +1,31 @@
+project_id = "ipnpugitercjsawupazz"
+
+[functions]
+  [functions.auth-email-hook]
+    verify_jwt = false
+  [functions.send-newsletter]
+    verify_jwt = true
+  [functions.extract-job-details]
+    verify_jwt = true
+  [functions.extract-job-candidates]
+    verify_jwt = true
+  [functions.preview-transactional-email]
+    verify_jwt = false
+  [functions.subscribe-newsletter]
+    verify_jwt = false
+  [functions.admin-send-refresh-check]
+    verify_jwt = false
+  [functions.reactivate-job]
+    verify_jwt = false
+
+[functions.collect-gmail-jobs]
+verify_jwt = false
+
+[functions.collect-slack-jobs]
+verify_jwt = true
+
+[functions.send-app-email]
+verify_jwt = true
+
+[functions.handle-email-events]
+verify_jwt = false
