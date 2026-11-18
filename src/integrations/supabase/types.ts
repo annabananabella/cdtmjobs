@@ -345,6 +345,33 @@ export type Database = {
           },
         ]
       }
+      slack_processed_messages: {
+        Row: {
+          channel_id: string
+          created: number
+          found: number
+          message_ts: string
+          processed_at: string
+          skipped_reason: string | null
+        }
+        Insert: {
+          channel_id: string
+          created?: number
+          found?: number
+          message_ts: string
+          processed_at?: string
+          skipped_reason?: string | null
+        }
+        Update: {
+          channel_id?: string
+          created?: number
+          found?: number
+          message_ts?: string
+          processed_at?: string
+          skipped_reason?: string | null
+        }
+        Relationships: []
+      }
       subscribers: {
         Row: {
           created_at: string

@@ -593,7 +593,7 @@ export default function JobSubmissionForm() {
             <Label className="font-display text-xs tracking-wider text-foreground mb-2 block">Member of any of these programs?</Label>
             <Popover>
               <PopoverTrigger asChild>
-                <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background input-styled">
+                <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 ring-offset-background input-styled">
                   <span className="truncate text-left">
                     {accelerators.length === 0
                       ? "Select programs"

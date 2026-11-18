@@ -92,6 +92,13 @@
       "when": 1794509703681,
       "tag": "0012_slack_collector",
       "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1794515570331,
+      "tag": "0013_table_comments",
+      "breakpoints": true
     }
   ]
 }

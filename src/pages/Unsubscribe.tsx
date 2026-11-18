@@ -8,6 +8,16 @@ import { Loader2, CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
 
 type Status = "loading" | "valid" | "already_used" | "invalid" | "success" | "error";
 
+// Shown on every outcome: the link covers the newsletter; anything else is
+// handled by hand so nobody is left without a way to opt out.
+const FullRemovalNote = () => (
+  <p className="text-xs text-muted-foreground pt-2">
+    to stop all emails from us, write to{" "}
+    <a href="mailto:hello@cdtmjobs.com?subject=Unsubscribe" className="underline text-foreground">hello@cdtmjobs.com</a>
+    {" "}and we'll remove you.
+  </p>
+);
+
 const Unsubscribe = () => {
   const [searchParams] = useSearchParams();
   const token = searchParams.get("token");
@@ -19,7 +29,7 @@ const Unsubscribe = () => {
     const validate = async () => {
       try {
         const res = await fetch(
-          `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/handle-email-unsubscribe?token=${token}`,
+          `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/handle-email-unsubscribe?token=${encodeURIComponent(token)}`,
           { headers: { apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY } }
         );
         const data = await res.json();
@@ -55,7 +65,7 @@ const Unsubscribe = () => {
       <div className="text-center space-y-4">
         <AlertTriangle className="h-6 w-6 text-accent mx-auto" />
         <p className="font-display text-sm font-semibold">unsubscribe?</p>
-        <p className="text-xs text-muted-foreground">you'll stop receiving job listing emails.</p>
+        <p className="text-xs text-muted-foreground">you'll stop receiving the cdtm jobs newsletter.</p>
         <button onClick={handleUnsubscribe} className="inline-flex items-center justify-center px-6 py-2.5 rounded-lg border border-destructive bg-transparent text-destructive font-display text-xs tracking-wider font-semibold hover:bg-destructive hover:text-destructive-foreground transition-all">
           confirm unsubscribe.
         </button>
@@ -65,14 +75,16 @@ const Unsubscribe = () => {
       <div className="text-center space-y-3">
         <CheckCircle2 className="h-6 w-6 text-primary mx-auto" />
         <p className="font-display text-sm font-semibold">already unsubscribed.</p>
-        <p className="text-xs text-muted-foreground">you won't receive any more emails.</p>
+        <p className="text-xs text-muted-foreground">you won't receive the newsletter anymore.</p>
+        <FullRemovalNote />
       </div>
     ),
     success: (
       <div className="text-center space-y-3">
         <CheckCircle2 className="h-6 w-6 text-primary mx-auto" />
         <p className="font-display text-sm font-semibold">unsubscribed.</p>
-        <p className="text-xs text-muted-foreground">you've been removed from our mailing list.</p>
+        <p className="text-xs text-muted-foreground">you won't receive the newsletter anymore.</p>
+        <FullRemovalNote />
       </div>
     ),
     invalid: (
@@ -80,6 +92,7 @@ const Unsubscribe = () => {
         <XCircle className="h-6 w-6 text-destructive mx-auto" />
         <p className="font-display text-sm font-semibold">invalid link.</p>
         <p className="text-xs text-muted-foreground">this unsubscribe link is invalid or has expired.</p>
+        <FullRemovalNote />
       </div>
     ),
     error: (
@@ -87,6 +100,7 @@ const Unsubscribe = () => {
         <XCircle className="h-6 w-6 text-destructive mx-auto" />
         <p className="font-display text-sm font-semibold">something went wrong.</p>
         <p className="text-xs text-muted-foreground">please try again later.</p>
+        <FullRemovalNote />
       </div>
     ),
   };

@@ -12,6 +12,7 @@ export default function Footer() {
           alumni.
         </span>
         <nav className="flex items-center gap-1">
+          <Link to="/about" className="font-display text-xs text-muted-foreground hover:text-foreground transition-colors tracking-wider px-3 py-1.5">About</Link>
           <Link to="/imprint" className="font-display text-xs text-muted-foreground hover:text-foreground transition-colors tracking-wider px-3 py-1.5">Imprint</Link>
           <Link to="/privacy" className="font-display text-xs text-muted-foreground hover:text-foreground transition-colors tracking-wider px-3 py-1.5">Privacy</Link>
           <Link to="/terms" className="font-display text-xs text-muted-foreground hover:text-foreground transition-colors tracking-wider px-3 py-1.5">Terms</Link>
