@@ -1,0 +1,97 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1794491823084,
+      "tag": "0000_job_candidates_review_queue",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794491826279,
+      "tag": "0001_lock_down_admin_send_email",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794493242537,
+      "tag": "0002_listing_auto_extracted",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1794493556621,
+      "tag": "0003_person_name_from_email",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1794494594191,
+      "tag": "0004_gmail_processed_messages",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1794495331449,
+      "tag": "0005_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1794496194715,
+      "tag": "0006_admin_newsletter_history",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1794496392449,
+      "tag": "0007_monthly_refresh_checks",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1794500091530,
+      "tag": "0008_normalize_job_display_punctuation",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1794509462955,
+      "tag": "0009_schedule_newsletter_and_monthly_refresh",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1794509463955,
+      "tag": "0010_admin_send_email_uses_send_app_email",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1794509464955,
+      "tag": "0011_schedule_collect_gmail_jobs",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1794509703681,
+      "tag": "0012_slack_collector",
+      "breakpoints": true
+    }
+  ]
+}
